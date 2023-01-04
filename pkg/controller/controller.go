@@ -9,6 +9,7 @@ type Controller interface {
 	TextAll(output *[]string) Controller
 
 	Scrape() error
+	Clone() Controller
 }
 
 func New() Controller {

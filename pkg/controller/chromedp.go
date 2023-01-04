@@ -18,6 +18,10 @@ func (cdpc *chromedpNodeController) Scrape() error {
 	return scraper.New().Scrape(cdpc.actions()...)
 }
 
+func (cdpc *chromedpNodeController) Clone() Controller {
+	return &chromedpNodeController{append([]Node{}, cdpc.nodes...)}
+}
+
 func (cdpc *chromedpNodeController) Click() Controller {
 	cdpc.nodes = append(cdpc.nodes, newClickNode())
 	return cdpc
