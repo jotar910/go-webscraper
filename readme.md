@@ -21,5 +21,7 @@ The runtime component is responsible for the execution lifecycle of the scraper.
 * "do" represents the scraping code to run on every iteration. This is where the actual scraping takes place.
 
 We are constantly working to improve my web scraper. Our next goal is to create a domain specific language (DSL) that will allow you to scrape pages using either a CLI or a web page interface. This DSL will provide a simple and intuitive way to specify the actions to be taken during the scraping process.
+
 In addition to using my web scraper as a standalone tool, you can also use it as a library. By utilizing the plugin pattern, you can easily incorporate my web scraper into your own Go projects as a flexible and efficient data extraction solution.
+
 Thank you for choosing my Golang web scraper. If you have any questions or suggestions, don't hesitate to reach out. We hope you find my scraper useful and efficient in your data extraction needs.
