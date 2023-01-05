@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"webscrapper/pkg/runtimectrl"
 	"webscrapper/pkg/scraper"
 
 	"github.com/chromedp/chromedp"
@@ -18,7 +19,7 @@ func (cdpc *chromedpNodeController) Scrape() error {
 	return scraper.New().Scrape(cdpc.actions()...)
 }
 
-func (cdpc *chromedpNodeController) Clone() Controller {
+func (cdpc *chromedpNodeController) Clone() runtimectrl.RuntimeController {
 	return &chromedpNodeController{append([]Node{}, cdpc.nodes...)}
 }
 
